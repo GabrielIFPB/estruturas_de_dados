@@ -52,5 +52,7 @@ Mkfile.old
 dkms.conf
 
 *
+!*/
 !*.c
+!*.java
 !Makefile
