@@ -1,7 +1,7 @@
 
 import java.util.Scanner;
 
-public class BubbleSort01 {
+public class BubbleSort02 {
 	public static void main(String[] args) {
 
 		int N = 10;
