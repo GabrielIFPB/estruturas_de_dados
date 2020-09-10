@@ -1,11 +1,11 @@
 
 import java.util.Scanner;
 
-public class BubbleSort {
+public class BubbleSort01 {
 	public static void main(String[] args) {
 
-		int N = 5;
-		int vetor[] = new int[5];
+		int N = 10;
+		int vetor[] = new int[N];
 		int aux;
 		Scanner entrada = new Scanner(System.in);
 
@@ -14,12 +14,12 @@ public class BubbleSort {
 			vetor[i] = entrada.nextInt();
 		}
 
-		for (int i = 0; i < N; i++) {
-			for (int j = 0; j < (N - 1); j++) {
-				if (vetor[j] > vetor[j + 1]) {
+		for (int i = 0; i < (N - 1); i++) {
+			for (int j = (N - 1); j > i; j--) {
+				if (vetor[j] < vetor[j - 1]) {
 					aux = vetor[j];
-					vetor[j] = vetor[j + 1];
-					vetor[j + 1] = aux;
+					vetor[j] = vetor[j - 1];
+					vetor[j - 1] = aux;
 				}
 			}
 		}
