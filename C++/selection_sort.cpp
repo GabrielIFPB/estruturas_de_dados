@@ -3,7 +3,8 @@
 using namespace std;
 
 int main() {
-	int aux, N = 5;
+	int N = 5;
+	int aux, menor, pos;
 	int vetor[N];
 
 	for (int i = 0; i < N; i++) {
@@ -11,15 +12,20 @@ int main() {
 		cin >> vetor[i];
 	}
 
-	int j = 0;
-	for (int i = 1; i < N; i++) {
+	for (int i = 0; i < (N - 1); i++) {
 		aux = vetor[i];
-		j = i - 1;
-		while (j >= 0 && vetor[j] > aux) {
-			vetor[j+1] = vetor[j];
-			j--;
+		menor = vetor[i+1];
+		pos = i + 1;
+		for (int j = i + 1; j < N; j++) {
+			if (vetor[j] < menor) {
+				menor = vetor[j];
+				pos = j;
+			}
 		}
-		vetor[j+1] = aux;
+		if (menor < aux) {
+			vetor[i] = vetor[pos];
+			vetor[pos] = aux;
+		}
 	}
 
 	for (int i = 0; i < N; i++) {
