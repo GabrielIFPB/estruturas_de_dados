@@ -33,14 +33,15 @@ def quick_sort(vetor: list, inicio: int, fim: int):
 		quick_sort(vetor, (q + 1), fim)
 
 
+if __name__ == '__main__':
+	
+	N = 10
+	vetor = [None] * N
 
-N = 10
-vetor = [None] * N
+	for i in range(N):
+		vetor[i] = int(input('Entre com o ' + str(i + 1) + 'º valor: '))
 
-for i in range(N):
-	vetor[i] = int(input('Entre com o ' + str(i + 1) + 'º valor: '))
+	quick_sort(vetor, 0, (N - 1))
 
-quick_sort(vetor, 0, (N - 1))
-
-for i in range(N):
-	print(str(i + 1) + '° número: ' + str(vetor[i]), end='\n')
+	for i in range(N):
+		print(str(i + 1) + '° número: ' + str(vetor[i]), end='\n')
