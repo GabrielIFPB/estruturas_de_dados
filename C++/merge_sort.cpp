@@ -21,7 +21,7 @@ void intercalar(int vetor[], int inicio, int fim, int meio) {
 
 	for (int i = init; i <= meio; i++) {
 		aux[pos] = vetor[i];
-		pos +=1;
+		pos += 1;
 	}
 
 	for (int i = medium; i <= fim; i++) {
