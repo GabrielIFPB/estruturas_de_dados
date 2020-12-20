@@ -35,7 +35,7 @@ def quick_sort(vetor: list, inicio: int, fim: int):
 
 if __name__ == '__main__':
 	
-	N = 10
+	N = 6
 	vetor = [None] * N
 
 	for i in range(N):
