@@ -18,5 +18,6 @@ while n < N and troca:
 			vetor[i+1] = aux
 	n += 1
 
+
 for i in range(N):
 	print(str(i + 1) + '° número: ' + str(vetor[i]), end='\n')
